@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche de Contrôle - Tour des Véhicules</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            text-shadow: 2px 2px #000;
+        }
+        h2 {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            width: 40%;
+        }
+        input[type="text"], input[type="date"], textarea, select {
+            width: 58%;
+            padding: 6px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .header-info {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>HERRY AUTOMOBILES</strong><br>
+        25 rue de Brest, 29850 Gouesnou<br>
+        02 98 07 86 64<br>
+        gouesnou.automobiles@orange.fr
+    </div>
+
+    <div>
+        <h1>Check up du véhicule</h1>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Informations Générales</h2>
+            <div class="section">
+                <label for="date"><strong>Date :</strong></label>
+                <input type="date" id="date">
+            </div>
+            <div class="section">
+                <label for="client"><strong>Nom du client :</strong></label>
+                <input type="text" id="client" placeholder="Entrez le nom du client">
+            </div>
+            <div class="section">
+                <label for="vehicule"><strong>Véhicule :</strong></label>
+                <input type="text" id="vehicule" placeholder="Marque/Modèle">
+            </div>
+            <div class="section">
+                <label for="immatriculation"><strong>Immatriculation :</strong></label>
+                <input type="text" id="immatriculation" placeholder="Entrez l'immatriculation">
+            </div>
+            <div class="section">
+                <label for="kilometrage"><strong>Kilométrage :</strong></label>
+                <input type="text" id="kilometrage" placeholder="Entrez le kilométrage">
+            </div>
+            <div class="section">
+                <label for="controle-technique"><strong>Prochain contrôle :</strong></label>
+                <input type="date" id="controle-technique">
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>Tour du véhicule</h2>
+            <div class="section">
+                <label for="batterie"><strong>Batterie :</strong></label>
+                <select id="batterie">
+                    <option value="chargee">Chargée</option>
+                    <option value="a-remplacer">À remplacer</option>
+                    <option value="remplace-ce-jour">Remplacée ce jour</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="pneu-avant"><strong>Pneus avant :</strong></label>
+                <select id="pneu-avant">
+                    <option value="5">5%</option>
+                    <option value="25">25%</option>
+                    <option value="50">50%</option>
+                    <option value="75">75%</option>
+                    <option value="100">100%</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+            <div class="section">
+                <label for="pneu-arriere"><strong>Pneus arrière :</strong></label>
+                <select id="pneu-arriere">
+                    <option value="5">5%</option>
+                    <option value="25">25%</option>
+                    <option value="50">50%</option>
+                    <option value="75">75%</option>
+                    <option value="100">100%</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="frein-avant"><strong>Freins avant :</strong></label>
+                <select id="frein-avant">
+                    <option value="conforme">Conforme</option>
+                    <option value="plaquettes-5000">Plaquettes dans 5 000 km</option>
+                    <option value="plaquettes-remplacer">Plaquettes à remplacer</option>
+                    <option value="disques-plaquettes-5000">Disques et plaquettes dans 5 000 km</option>
+                    <option value="disques-plaquettes-remplacer">Disques et plaquettes à remplacer</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+            <div class="section">
+                <label for="frein-arriere"><strong>Freins arrière :</strong></label>
+                <select id="frein-arriere">
+                    <option value="conforme">Conforme</option>
+                    <option value="plaquettes-5000">Plaquettes dans 5 000 km</option>
+                    <option value="plaquettes-remplacer">Plaquettes à remplacer</option>
+                    <option value="disques-plaquettes-5000">Disques et plaquettes dans 5 000 km</option>
+                    <option value="disques-plaquettes-remplacer">Disques et plaquettes à remplacer</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="essuie-glace-avant"><strong>Essuie-glaces avant :</strong></label>
+                <select id="essuie-glace-avant">
+                    <option value="conforme">Conforme</option>
+                    <option value="a-remplacer">À remplacer</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+            <div class="section">
+                <label for="essuie-glace-arriere"><strong>Essuie-glaces arrière :</strong></label>
+                <select id="essuie-glace-arriere">
+                    <option value="conforme">Conforme</option>
+                    <option value="a-remplacer">À remplacer</option>
+                    <option value="remplace-ce-jour">Remplacés ce jour</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="pare-brise"><strong>Pare-brise :</strong></label>
+                <select id="pare-brise">
+                    <option value="conforme">Conforme</option>
+                    <option value="a-remplacer">À remplacer</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Remarques Complémentaires</h2>
+        <textarea rows="4" placeholder="Ajoutez des remarques ici..."></textarea>
+    </div>
+
+    <button id="fix-print-btn">Fixer pour impression</button>
+
+    <script>
+        document.getElementById("fix-print-btn").addEventListener("click", () => {
+            document.querySelectorAll("input, select, textarea").forEach(element => {
+                const value = element.value || element.options?.[element.selectedIndex]?.text || '';
+                const span = document.createElement("span");
+                span.textContent = value;
+                span.style.fontWeight = "bold";
+                element.replaceWith(span);
+            });
+
+            // Remove the button itself
+            document.getElementById("fix-print-btn").remove();
+        });
+    </script>
+</body>
+</html>
